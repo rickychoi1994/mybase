@@ -2,7 +2,7 @@
 node_modules
 
 # .vuepress
-.vuepress
+/.vuepress
 
 # MacOS desktop services store
 .DS_Store

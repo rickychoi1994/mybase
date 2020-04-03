@@ -1,10 +1,10 @@
 ---
 home: true
-# heroImage: /hero.png
+heroImage: /javascript.gif
 heroText: 前端学习
 tagline: 个人前端学习、积累和总结
 actionText: Let's Go →
-actionLink: /zh/guide/
+actionLink: /guide/
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
