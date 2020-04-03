@@ -1,0 +1,20 @@
+{
+  "name": "mybase",
+  "version": "1.0.0",
+  "repository": "git@github.com:rickychoi1994/mybase.git",
+  "author": "Ricky <cuiruiqi@foxmail.com>",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "devDependencies": {
+    "vuepress": "^1.4.0"
+  }
+}
