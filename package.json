@@ -12,9 +12,10 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "deploy": "bash deploy.sh && rimraf .vuepress"
   },
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "vuepress": "^1.4.0"
   }
 }
