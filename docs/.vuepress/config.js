@@ -7,9 +7,20 @@ module.exports = {
   themeConfig: {
     repo: 'rickychoi1994/mybase',
     nav: [
-      { text: 'Home', link: '/' }
+      { text: '首页', link: '/' },
+      { text: 'Docker', link: '/docker/' }
     ],
-    sidebar: 'auto',
+    sidebar: {
+      '/docker/': [
+        '',
+        'options',
+        'command',
+        'data',
+        'deploy',
+        'dockerfile'
+      ]
+    },
+    sidebarDepth: 2,
     lastUpdated: '最近一次更新时间'
   },
   plugins: [
