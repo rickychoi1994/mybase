@@ -17,7 +17,10 @@ module.exports = {
         'command',
         'data',
         'deploy',
-        'dockerfile'
+        'dockerfile',
+        'docker_compose',
+        'private_store',
+        'compare'
       ]
     },
     sidebarDepth: 2,
