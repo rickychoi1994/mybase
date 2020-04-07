@@ -146,4 +146,4 @@ CentOS：
 
 ## 架构
 
-![docker架构](/docker1.png)
+<img :src="$withBase('/docker1.png')">

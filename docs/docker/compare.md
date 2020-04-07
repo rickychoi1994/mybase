@@ -7,9 +7,9 @@
 - 容器化软件在任何环境中都能始终如一地运行
 - 容器赋予了软件独立性，使其免受外在环境差异的影响，从而有助于减少团队在相同基础设施上运行不同软件时的冲突
 
-![compare1](/compare.png)
+<img :src="$withBase('/compare.png')" alt="图1">
 
-![compare1](/compare2.png)
+<img :src="$withBase('/compare2.png')" alt="图2">
 
 相同:
 
@@ -20,4 +20,4 @@
 - 容器虚拟化的是操作系统，虚拟机虚拟化的是硬件
 - 传统虚拟机可以运行不同的操作系统，容器只能运行同一类型操作系统
 
-![compare3](/compare3.png)
+<img :src="$withBase('/compare3.png')" alt="图3">

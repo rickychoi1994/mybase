@@ -8,7 +8,8 @@ module.exports = {
     repo: 'rickychoi1994/mybase',
     nav: [
       { text: '首页', link: '/' },
-      { text: 'Docker', link: '/docker/' }
+      { text: 'Docker', link: '/docker/' },
+      // { text: 'Nginx', link: '/nginx/' },
     ],
     sidebar: {
       '/docker/': [
@@ -21,6 +22,9 @@ module.exports = {
         'docker_compose',
         'private_store',
         'compare'
+      ],
+      '/nginx/': [
+        ''
       ]
     },
     sidebarDepth: 2,

@@ -13,8 +13,7 @@ Docker Compose是一个编排多容器分布式部署的工具，提供命令集
 2. 使用`docker-compose.yml`定义组成应用的各服务
 3. 运行`docker-compose up`启动应用
 
-![docker-compose](/docker-compose.png)
-
+<img :src="$withBase('/docker-compose.png')">
 
 ## 安装
 

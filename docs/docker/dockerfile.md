@@ -24,7 +24,7 @@ Linux文件系统由`bootfs`和`rootfs`两部分组成
 - 一个镜像可以放在另一个镜像的上面。位于下面的镜像称为父镜像，最底部的镜像称为基础镜像
 - 当一个镜像启动容器时，Docker会在最顶层加载一个读写文件系统作为容器
 
-![docker-image](/docker-image.png)
+<img :src="$withBase('/docker-image.png')">
 
 :::tip 解答
 - Docker镜像本质是什么？
@@ -44,7 +44,7 @@ Docker镜像如何制作？
   - `docker save -o 压缩文件名称 镜像名称:版本号`
   - `docker load -i 压缩文件名称`
 
-![docker-image](/docker-image2.png)
+<img :src="$withBase('/docker-image2.png')">
 
 ### Dockerfile
 
