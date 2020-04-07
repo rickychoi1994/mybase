@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>初识 Docker | 前端学习</title>
+    <meta name="description" content="个人前端知识的学习、积累和总结">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/mybase/assets/css/0.styles.6a1e607d.css" as="style"><link rel="preload" href="/mybase/assets/js/app.9ed2f987.js" as="script"><link rel="preload" href="/mybase/assets/js/2.24c8d6a2.js" as="script"><link rel="preload" href="/mybase/assets/js/6.c18c11ea.js" as="script"><link rel="prefetch" href="/mybase/assets/js/10.332a6443.js"><link rel="prefetch" href="/mybase/assets/js/11.f5a66f2a.js"><link rel="prefetch" href="/mybase/assets/js/12.54061730.js"><link rel="prefetch" href="/mybase/assets/js/13.ed8d2dee.js"><link rel="prefetch" href="/mybase/assets/js/14.9e177830.js"><link rel="prefetch" href="/mybase/assets/js/15.68a37b89.js"><link rel="prefetch" href="/mybase/assets/js/16.0c52745a.js"><link rel="prefetch" href="/mybase/assets/js/3.10af510b.js"><link rel="prefetch" href="/mybase/assets/js/4.0394e7c9.js"><link rel="prefetch" href="/mybase/assets/js/5.b5b11767.js"><link rel="prefetch" href="/mybase/assets/js/7.3544361c.js"><link rel="prefetch" href="/mybase/assets/js/8.374f18ea.js"><link rel="prefetch" href="/mybase/assets/js/9.6dae1890.js">
+    <link rel="stylesheet" href="/mybase/assets/css/0.styles.6a1e607d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mybase/" class="home-link router-link-active"><!----> <span class="site-name">前端学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mybase/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/mybase/docker/" class="nav-link router-link-exact-active router-link-active">
+  Docker
+</a></div> <a href="https://github.com/rickychoi1994/mybase" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mybase/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/mybase/docker/" class="nav-link router-link-exact-active router-link-active">
+  Docker
+</a></div> <a href="https://github.com/rickychoi1994/mybase" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/mybase/docker/" class="active sidebar-link">初识 Docker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mybase/docker/#概念" class="sidebar-link">概念</a></li><li class="sidebar-sub-header"><a href="/mybase/docker/#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/mybase/docker/#架构" class="sidebar-link">架构</a></li></ul></li><li><a href="/mybase/docker/options.html" class="sidebar-link">镜像加速</a></li><li><a href="/mybase/docker/command.html" class="sidebar-link">Docker 命令</a></li><li><a href="/mybase/docker/data.html" class="sidebar-link">数据卷</a></li><li><a href="/mybase/docker/deploy.html" class="sidebar-link">应用部署</a></li><li><a href="/mybase/docker/dockerfile.html" class="sidebar-link">Dockerfile</a></li><li><a href="/mybase/docker/docker_compose.html" class="sidebar-link">Docker Compose</a></li><li><a href="/mybase/docker/private_store.html" class="sidebar-link">私有仓库</a></li><li><a href="/mybase/docker/compare.html" class="sidebar-link">与传统虚拟机的比较</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="初识-docker"><a href="#初识-docker" class="header-anchor">#</a> 初识 Docker</h1> <h2 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h2> <ul><li>Docker是一个开源的应用容器引擎</li> <li>诞生于2013年初，基于Go语言实现</li> <li>Docker可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发不到任何流行的Linux机器上</li> <li>容器是完全使用沙箱机制，相互隔离</li> <li>容器性能开销极低</li> <li>Docker从17.03版本后分为 <code>CE（社区版）</code>和 <code>EE（企业版）</code></li></ul> <p><strong>Docker是一种容器技术，可解决软件跨环境迁移的问题。</strong></p> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <p>在Linux上安装Docker</p> <p>CentOS：</p> <ol><li><p>先删除旧版本（如果没有可以跳过）</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">sudo</span> yum remove docker <span class="token punctuation">\</span>
+                  docker-client <span class="token punctuation">\</span>
+                  docker-client-latest <span class="token punctuation">\</span>
+                  docker-common <span class="token punctuation">\</span>
+                  docker-latest <span class="token punctuation">\</span>
+                  docker-latest-logrotate <span class="token punctuation">\</span>
+                  docker-logrotate <span class="token punctuation">\</span>
+                  docker-engine
+</code></pre></div></li> <li><p>安装必须的依赖</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">sudo</span> yum <span class="token function">install</span> -y yum-utils <span class="token punctuation">\</span>
+       device-mapper-persistent-data <span class="token punctuation">\</span>
+       lvm2
+</code></pre></div><p>添加<code>stable</code>的Docker-ce的源：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">sudo</span> yum-config-manager <span class="token punctuation">\</span>
+    --add-repo <span class="token punctuation">\</span>
+    https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre></div></li> <li><p>安装docker-ce</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">sudo</span> yum <span class="token function">install</span> docker-ce docker-ce-cli containerd.io
+</code></pre></div></li> <li><p>选择指定的安装版本（可选）</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ yum list docker-ce --showduplicates <span class="token operator">|</span> <span class="token function">sort</span> -r
+
+docker-ce.x86_64  <span class="token number">3</span>:18.09.1-3.el7                     docker-ce-stable
+docker-ce.x86_64  <span class="token number">3</span>:18.09.0-3.el7                     docker-ce-stable
+docker-ce.x86_64  <span class="token number">18.06</span>.1.ce-3.el7                    docker-ce-stable
+docker-ce.x86_64  <span class="token number">18.06</span>.0.ce-3.el7                    docker-ce-stable
+
+</code></pre></div><p>比如要安装<code>3:18.09.1-3.el7</code>版本</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">sudo</span> yum <span class="token function">install</span> docker-ce-<span class="token operator">&lt;</span>VERSION_STRING<span class="token operator">&gt;</span> docker-ce-cli-<span class="token operator">&lt;</span>VERSION_STRING<span class="token operator">&gt;</span> containerd.io
+</code></pre></div><p>说明：</p> <p>第一部分<code>docker-ce</code>，第二部分<code>18.09.1</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">sudo</span> yum <span class="token function">install</span> -y docker-ce-18.09.1 docker-ce-cli-18.09.1
+</code></pre></div></li> <li><p>启动服务并测试一下</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 启动服务</span>
+<span class="token function">sudo</span> systemctl start docker
+
+<span class="token comment"># 来一个Hello World吧</span>
+<span class="token function">sudo</span> docker run hello-world
+Unable to <span class="token function">find</span> image <span class="token string">'hello-world:latest'</span> locally
+latest: Pulling from library/hello-world
+1b930d010525: Pull complete
+Digest: sha256:2557e3c07ed1e38f26e389462d03ed943586f744621577a99efb77324b0fe535
+Status: Downloaded newer image <span class="token keyword">for</span> hello-world:latest
+
+Hello from Docker<span class="token operator">!</span>
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ <span class="token number">1</span>. The Docker client contacted the Docker daemon.
+ <span class="token number">2</span>. The Docker daemon pulled the <span class="token string">&quot;hello-world&quot;</span> image from the Docker Hub.
+    <span class="token punctuation">(</span>amd64<span class="token punctuation">)</span>
+ <span class="token number">3</span>. The Docker daemon created a new container from that image <span class="token function">which</span> runs the
+    executable that produces the output you are currently reading.
+ <span class="token number">4</span>. The Docker daemon streamed that output to the Docker client, <span class="token function">which</span> sent it
+    to your terminal.
+
+To try something <span class="token function">more</span> ambitious, you can run an Ubuntu container with:
+$ docker run -it ubuntu <span class="token function">bash</span>
+
+Share images, automate workflows, and <span class="token function">more</span> with a <span class="token function">free</span> Docker ID:
+ https://hub.docker.com/
+
+For <span class="token function">more</span> examples and ideas, visit:
+ https://docs.docker.com/get-started/
+</code></pre></div><p>如果看到上面的提示，说明Docker安装成功并运行了。</p></li> <li><p>关于升级&amp;删除</p> <p>升级：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 更新所有</span>
+yum -u update
+
+<span class="token comment"># 更新指定</span>
+yum -y update docker-ce docker-ce-cli containerd.io
+</code></pre></div><p>删除：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> yum remove docker-ce
+
+<span class="token comment"># 删除文件系统</span>
+<span class="token function">sudo</span> <span class="token function">rm</span> -rf /var/lib/docker
+</code></pre></div></li></ol> <p>更多安装方法：</p> <p><a href="https://www.toimc.com/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#more" target="_blank" rel="noopener noreferrer">Docker安装<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="架构"><a href="#架构" class="header-anchor">#</a> 架构</h2> <img src="/mybase/docker1.png"></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近一次更新时间:</span> <span class="time">4/7/2020, 5:53:35 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/mybase/docker/options.html">
+        镜像加速
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/mybase/assets/js/app.9ed2f987.js" defer></script><script src="/mybase/assets/js/2.24c8d6a2.js" defer></script><script src="/mybase/assets/js/6.c18c11ea.js" defer></script>
+  </body>
+</html>

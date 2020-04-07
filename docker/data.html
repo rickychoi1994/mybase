@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据卷 | 前端学习</title>
+    <meta name="description" content="个人前端知识的学习、积累和总结">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/mybase/assets/css/0.styles.6a1e607d.css" as="style"><link rel="preload" href="/mybase/assets/js/app.9ed2f987.js" as="script"><link rel="preload" href="/mybase/assets/js/2.24c8d6a2.js" as="script"><link rel="preload" href="/mybase/assets/js/9.6dae1890.js" as="script"><link rel="prefetch" href="/mybase/assets/js/10.332a6443.js"><link rel="prefetch" href="/mybase/assets/js/11.f5a66f2a.js"><link rel="prefetch" href="/mybase/assets/js/12.54061730.js"><link rel="prefetch" href="/mybase/assets/js/13.ed8d2dee.js"><link rel="prefetch" href="/mybase/assets/js/14.9e177830.js"><link rel="prefetch" href="/mybase/assets/js/15.68a37b89.js"><link rel="prefetch" href="/mybase/assets/js/16.0c52745a.js"><link rel="prefetch" href="/mybase/assets/js/3.10af510b.js"><link rel="prefetch" href="/mybase/assets/js/4.0394e7c9.js"><link rel="prefetch" href="/mybase/assets/js/5.b5b11767.js"><link rel="prefetch" href="/mybase/assets/js/6.c18c11ea.js"><link rel="prefetch" href="/mybase/assets/js/7.3544361c.js"><link rel="prefetch" href="/mybase/assets/js/8.374f18ea.js">
+    <link rel="stylesheet" href="/mybase/assets/css/0.styles.6a1e607d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mybase/" class="home-link router-link-active"><!----> <span class="site-name">前端学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mybase/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/mybase/docker/" class="nav-link router-link-active">
+  Docker
+</a></div> <a href="https://github.com/rickychoi1994/mybase" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mybase/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/mybase/docker/" class="nav-link router-link-active">
+  Docker
+</a></div> <a href="https://github.com/rickychoi1994/mybase" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/mybase/docker/" class="sidebar-link">初识 Docker</a></li><li><a href="/mybase/docker/options.html" class="sidebar-link">镜像加速</a></li><li><a href="/mybase/docker/command.html" class="sidebar-link">Docker 命令</a></li><li><a href="/mybase/docker/data.html" class="active sidebar-link">数据卷</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mybase/docker/data.html#概念" class="sidebar-link">概念</a></li><li class="sidebar-sub-header"><a href="/mybase/docker/data.html#作用" class="sidebar-link">作用</a></li><li class="sidebar-sub-header"><a href="/mybase/docker/data.html#配置" class="sidebar-link">配置</a></li><li class="sidebar-sub-header"><a href="/mybase/docker/data.html#数据卷容器" class="sidebar-link">数据卷容器</a></li></ul></li><li><a href="/mybase/docker/deploy.html" class="sidebar-link">应用部署</a></li><li><a href="/mybase/docker/dockerfile.html" class="sidebar-link">Dockerfile</a></li><li><a href="/mybase/docker/docker_compose.html" class="sidebar-link">Docker Compose</a></li><li><a href="/mybase/docker/private_store.html" class="sidebar-link">私有仓库</a></li><li><a href="/mybase/docker/compare.html" class="sidebar-link">与传统虚拟机的比较</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="数据卷"><a href="#数据卷" class="header-anchor">#</a> 数据卷</h1> <div class="custom-block warning"><p class="custom-block-title">思考</p> <ul><li>Docker 容器删除后，在容器中产生的数据还在吗？</li> <li>Docker 容器和外部机器可以直接交换文件吗？</li> <li>容器之间如何进行数据交互？</li></ul></div> <h2 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h2> <ul><li>数据卷是宿主机终端俄一个目录或文件</li> <li>当容器目录和数据卷目录绑定后，对方的修改会立即同步</li> <li>一个数据卷可以被多个容器同时挂载</li> <li>一个容器也可以挂载多个数据卷</li></ul> <h2 id="作用"><a href="#作用" class="header-anchor">#</a> 作用</h2> <ul><li>容器数据持久化</li> <li>外部机器和容器间接通信</li> <li>容器之间的数据交换</li></ul> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 创建启动容器时，使用-v参数设置数据卷</span>
+docker run <span class="token punctuation">..</span>. -v 宿主机目录<span class="token punctuation">(</span>文件<span class="token punctuation">)</span>:容器内目录<span class="token punctuation">(</span>文件<span class="token punctuation">)</span><span class="token punctuation">..</span>.
+
+<span class="token comment"># 注意事项:</span>
+<span class="token comment">#    1. 目录必须是绝对路径</span>
+<span class="token comment">#    2. 如果目录不存在，自动创建</span>
+<span class="token comment">#    3. 可以挂载多个数据卷</span>
+</code></pre></div><h2 id="数据卷容器"><a href="#数据卷容器" class="header-anchor">#</a> 数据卷容器</h2> <p>多容器进行数据交换:</p> <ul><li>多个容器挂载同一个数据卷 (容器多的话操作麻烦，对于数据的保存持久化和恢复不方便)</li> <li><strong>数据卷容器</strong></li></ul> <img src="/mybase/data.png" alt="数据卷"> <p>创建一个容器<code>c3</code>并挂载宿主机的一个数据卷，之后把<code>c1</code>和<code>c2</code>挂载到<code>c3</code>上，相当于<code>c1</code>、<code>c2</code>和<code>c3</code>都挂载到了同一个数据卷上，这就意味着<code>c1</code>、<code>c2</code>、<code>c3</code>可以相互的数据传输和通讯，即使<code>c3</code>出现了问题，<code>c1</code>和<code>c2</code>依然可以通过宿主机的数据卷进行通讯。<code>c3</code>就被成为数据卷容器。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 创建启动c3数据卷容器，使用-v参数设置数据卷</span>
+docker run -it --name c3 -v /volume <span class="token punctuation">..</span>.
+
+<span class="token comment"># 注意</span>
+<span class="token comment"># 上面命令的 /volume 是容器目录，并不是宿主机数据卷目录，但是宿主机会自动分配一个目录当作数据卷</span>
+
+<span class="token comment"># 创建启动c1、c2容器，使用--volumes-from参数设置数据卷</span>
+docker run -it --name c1 --volumes-from c3 <span class="token punctuation">..</span>.
+docker run -it --name c2 --volumes-from c3 <span class="token punctuation">..</span>.
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近一次更新时间:</span> <span class="time">4/7/2020, 5:53:35 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mybase/docker/command.html" class="prev">
+        Docker 命令
+      </a></span> <span class="next"><a href="/mybase/docker/deploy.html">
+        应用部署
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/mybase/assets/js/app.9ed2f987.js" defer></script><script src="/mybase/assets/js/2.24c8d6a2.js" defer></script><script src="/mybase/assets/js/9.6dae1890.js" defer></script>
+  </body>
+</html>
