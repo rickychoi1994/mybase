@@ -8,10 +8,15 @@ module.exports = {
     repo: 'rickychoi1994/mybase',
     nav: [
       { text: '首页', link: '/' },
+      { text: 'JavaScript', link: '/javascript/' },
       { text: 'Docker', link: '/docker/' },
-      // { text: 'Nginx', link: '/nginx/' },
+      { text: 'Nginx', link: '/nginx/' },
     ],
     sidebar: {
+      '/javascript/': [
+        '',
+        'basic-concept',
+      ],
       '/docker/': [
         '',
         'options',
