@@ -16,6 +16,7 @@ module.exports = {
       '/javascript/': [
         '',
         'basic-concept',
+        'variate'
       ],
       '/docker/': [
         '',
